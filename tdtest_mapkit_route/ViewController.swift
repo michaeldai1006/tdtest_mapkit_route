@@ -1,20 +1,24 @@
-//
-//  ViewController.swift
-//  tdtest_mapkit_route
-//
-//  Created by OD5 on 5/31/19.
-//  Copyright © 2019 tdtest. All rights reserved.
-//
-
 import UIKit
+import MapKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var sourceTextField: UITextField!
+    @IBOutlet weak var destinationTextField: UITextField!
+    @IBOutlet weak var mainMapView: MKMapView!
+    @IBOutlet weak var mainTextView: UITextView!
+    
+    @IBAction func goBtnDidPressed(_ sender: UIButton) {
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        initUI()
     }
-
-
+    
+    private func initUI() {
+        sourceTextField.text = ""
+        destinationTextField.text = ""
+        mainTextView.text = ""
+    }
 }
-
