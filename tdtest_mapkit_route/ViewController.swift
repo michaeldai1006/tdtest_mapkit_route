@@ -100,7 +100,14 @@ class ViewController: UIViewController, MKMapViewDelegate {
         sourceTextField.text = ""
         destinationTextField.text = ""
         mainTextView.text = ""
+        
+        // Tap to dismiss
+        let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
+        tap.cancelsTouchesInView = false
+        self.mainMapView.addGestureRecognizer(tap)
     }
+    
+    
     
     private func setupDelegate() {
         mainMapView.delegate = self
